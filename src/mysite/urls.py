@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^$', 'resume.views.home', name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^posts/', include("posts.urls", namespace='posts')),
+    url(r'^tinymce/', include('tinymce.urls'))
 ]
 
 if settings.DEBUG:

@@ -3,6 +3,7 @@ from django.db.models.signals import pre_save
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.utils.text import slugify
+from tinymce.models import HTMLField
 
 # Create your models here.
 def upload_location(instance, filename):
@@ -19,7 +20,7 @@ class Post(models.Model):
             width_field="width_field")
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
-    content = models.TextField()
+    content = HTMLField()
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 
