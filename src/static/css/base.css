@@ -1,0 +1,14 @@
+h1 {
+  color: #777777;
+}
+
+
+ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+.navbar-header {
+  position: fixed;
+
+}
