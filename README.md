@@ -1,2 +1,1 @@
-pip install django==1.9
-pip install pillow
+pip install django==1.9 pillow
