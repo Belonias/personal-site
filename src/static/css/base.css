@@ -12,3 +12,7 @@ ul li {
   position: fixed;
 
 }
+
+.container {
+  word-break: break-all;
+}
