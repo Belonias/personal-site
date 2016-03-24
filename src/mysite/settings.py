@@ -138,5 +138,5 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme': "advanced",
     'custom_undo_redo_levels': 10,
     'height': 400,
-    'width': 600
+    'width': 600,
 }
