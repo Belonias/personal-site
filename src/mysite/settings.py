@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'posts',
     'resume',
-    'tinymce'
+    'tinymce',
+    'pagedown'
 ]
 
 MIDDLEWARE_CLASSES = [

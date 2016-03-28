@@ -8,11 +8,6 @@ ul li {
   display: inline;
 }
 
-.navbar-header {
-  position: fixed;
-
-}
-
 .container {
   word-break: break-all;
 }

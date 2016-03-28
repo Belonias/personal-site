@@ -4,6 +4,7 @@ from django.db import models
 from django.core.urlresolvers import reverse
 from django.utils.text import slugify
 from tinymce.models import HTMLField
+from pagedown.widgets import AdminPagedownWidget
 
 # Create your models here.
 def upload_location(instance, filename):
@@ -21,6 +22,9 @@ class Post(models.Model):
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
     content = HTMLField()
+    formfield_overrides = {
+        models.TextField: {'widget': AdminPagedownWidget },
+    }
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 

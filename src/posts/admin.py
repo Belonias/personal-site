@@ -14,4 +14,3 @@ class PostAdmin(admin.ModelAdmin):
         model = Post
 
 admin.site.register(Post, PostAdmin)
-

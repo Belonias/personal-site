@@ -17,26 +17,11 @@
 <style>
 {% block style %}{% endblock style %}
 </style>
+
+{% block head_extra %} {% endblock head_extra %}
+
 </head>
 <body>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <div class="sidebar-nav">
-          <div class="navbar-header">
-            <img alt="iakovos belonias" align="middle" src="{% static "img/102.png" %}">
-            <ul>
-              <li><a href="https://www.github.com/Belonias"><img alt="github" src="{% static "img/timeline/github_timeline.png" %}"></a></li>
-              <li><a href="https://www.facebook.com/belonias"><img alt="facebook" src="{% static "img/timeline/facebook_timeline.png" %}"></a></li>
-              <li><a href="mailto:iakovosbelonias@gmail.com"><img alt="gmail" src="{% static "img/timeline/gmail_timeline.png" %}"></a></li>
-              <li><a href="/"><img alt="belonias" src="{% static "img/timeline/cv_timeline.png" %}"></a></li>
-            </ul>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
 
 
 <div id="fb-root"></div>
@@ -50,15 +35,30 @@ fjs.parentNode.insertBefore(js, fjs);
 
 {% include "messages_display.html" %}
 <div class='container'>
-{% block content %}
-
-{% endblock content %}
+{% block content %}{% endblock content %}
 </div>
 
 
 
 <!-- Latest compiled and minified JavaScript -->
+<script   src="http://code.jquery.com/jquery-1.12.2.min.js"   integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="   crossorigin="anonymous"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".content-markdown").each(function(){
+    var content = $(this).text()
+    var markedContent = marked(content)
+    console.log(content)
+    var markedContent = marked(content)
+    console.log(markedContent)
+    $(this).html(markedContent)
+
+  })
+
+})
+</script>
 </body>
 </html>
