@@ -18,10 +18,10 @@
       <img src="{{ obj.image.url }}" class='img-responsive' />
       {% endif %}
 
-      <div class="caption">
+      <div class="caption post-detail-item">
         <h3><a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a></h3>
         <small>{{ obj.timestamp|timesince }} ago</small>
-        <p class='content-markdown'>{{ obj.content }}</p>
+        {{ obj.get_markdown|truncatechars_html:200 }}
         <p><a href="{{ obj.get_absolute_url }}" class="btn btn-primary" role="button">View</a></p>
       </div>
     </div>

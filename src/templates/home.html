@@ -6,6 +6,7 @@
 <title>Iakovos Belonias</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -19,13 +20,19 @@
 
   <div class="container">
     <div class="page-header">
+      <!--
       <div class="clearfix float-my-children">
       <img alt="iakovos belonias" src="{% static "img/timeline/102.png" %}">
-    <div><h1 id="timeline">Iakovos Belonias</h1></div>
-  </div>
+    <div><h1 class="timeh">Iakovos Belonias</h1></div>
+  </div>< -->
 
       <div class="bs-callout bs-callout-danger">
+        <div class="clearfix float-my-children">
+        <img alt="iakovos belonias" src="{% static "img/timeline/102.png" %}">
+      <div><h1 class="timeh">Iakovos Belonias</h1></div>
+    </div>
         <h4>Building stuff with code</h4>
+
         <p>
          Lorem ipsum dolor sit amet, ea vel prima adhuc, scripta liberavisse ea quo, te vel vidit mollis complectitur. Quis verear mel ne. Munere vituperata vis cu,
          te pri duis timeam scaevola, nam postea diceret ne. Cum ex quod aliquip mediocritatem, mei habemus persecuti mediocritatem ei.
@@ -33,15 +40,16 @@
         <p>
             Odio recteque expetenda eum ea, cu atqui maiestatis cum. Te eum nibh laoreet, case nostrud nusquam an vis.
             Clita debitis apeirian et sit, integre iudicabit elaboraret duo ex. Nihil causae adipisci id eos.
+            <ul class="timeline2">
+              <li class="timeline2"><a href="posts"><img alt="blog" src="{% static "img/timeline/angularjs.png" %}"></a></li>
+              <li class="timeline2"><img alt="github" src="{% static "img/timeline/bootstrap.png" %}"></li>
+              <li class="timeline2"><img alt="facebook" src="{% static "img/timeline/git.png" %}"></li>
+              <li class="timeline2"><img alt="gmail" src="{% static "img/timeline/linux.png" %}"></li>
+            </ul>
 
         </p>
       </div>
-      <ul class="timeline2">
-        <li class="timeline2"><a href="posts"><img alt="blog" src="{% static "img/timeline/blog_timeline.png" %}"></a></li>
-        <li class="timeline2"><img alt="github" src="{% static "img/timeline/github_timeline.png" %}"></li>
-        <li class="timeline2"><img alt="facebook" src="{% static "img/timeline/facebook_timeline.png" %}"></li>
-        <li class="timeline2"><img alt="gmail" src="{% static "img/timeline/gmail_timeline.png" %}"></li>
-      </ul>
+
     </div>
     <ul class="timeline">
       <li>

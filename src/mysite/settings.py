@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'posts',
     'resume',
     'tinymce',
-    'pagedown'
+    'markdown_deux',
+    'pagedown',
 ]
 
 MIDDLEWARE_CLASSES = [
