@@ -5,7 +5,7 @@ from .models import Post
 
 
 class PostForm(forms.ModelForm):
-    content = forms.CharField(widget=PagedownWidget)
+    content = forms.CharField(widget=PagedownWidget(show_preview=False))
     class Meta:
         model = Post
         fields = [

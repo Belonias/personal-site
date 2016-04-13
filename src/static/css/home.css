@@ -116,7 +116,7 @@
   background-color: #2e6da4 !important;
 }
 
-.timeline-badge.success {
+.timeline-badge.front {
   background-color: #3f903f !important;
 }
 
@@ -127,6 +127,11 @@
 .timeline-badge.danger {
   background-color: #d9534f !important;
 }
+
+.timeline-badge.angularjs {
+  background-color: #5D4C46 !important;
+}
+
 
 .timeline-badge.info {
   background-color: #5bc0de !important;

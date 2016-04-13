@@ -4,55 +4,16 @@ h1 {
 }
 p {font-family: 'Ubuntu', sans-serif;}
 
-
-ul li {
-  list-style-type: none;
-  display: inline;
-}
-
 .container {
   word-break: break-all;
+}
+
+.wmd-panel {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
 }
 
 .timeline2 {
   list-style-type: none;
   display: inline;
-}
-
-.bs-callout {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: #eee;
-    border-image: none;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px 1px 1px 5px;
-    margin-bottom: 5px;
-    padding: 20px;
-}
-.bs-callout:last-child {
-    margin-bottom: 0px;
-}
-.bs-callout h4 {
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-
-.bs-callout-danger {
-    border-left-color: #d9534f;
-}
-
-.bs-callout-danger h4{
-    color: #d9534f;
-}
-
-.float-my-children > * {
-    float:left;
-    margin-right:5px;
-}
-
-.page-header {
-  margin-top: -10px;
 }

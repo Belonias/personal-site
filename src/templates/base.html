@@ -9,7 +9,6 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 <link rel='stylesheet' href='{% static "css/base.css" %}' />
 
 <link rel="shortcut icon" type="image/png" href='{% static "img/favicon.ico" %}'/>
@@ -19,7 +18,6 @@
 </style>
 
 {% block head_extra %} {% endblock head_extra %}
-
 </head>
 <body>
 
@@ -35,38 +33,6 @@ fjs.parentNode.insertBefore(js, fjs);
 
 {% include "messages_display.html" %}
 <div class='container'>
-  <div class="page-header">
-    <!--
-    <div class="clearfix float-my-children">
-    <img alt="iakovos belonias" src="{% static "img/timeline/102.png" %}">
-  <div><h1 class="timeh">Iakovos Belonias</h1></div>
-</div>< -->
-
-    <div class="bs-callout bs-callout-danger">
-      <div class="clearfix float-my-children">
-      <img alt="iakovos belonias" src="{% static "img/timeline/102.png" %}">
-    <div><h1 class="timeh">Iakovos Belonias</h1></div>
-  </div>
-      <h4>Building stuff with code</h4>
-
-      <p>
-       Lorem ipsum dolor sit amet, ea vel prima adhuc, scripta liberavisse ea quo, te vel vidit mollis complectitur. Quis verear mel ne. Munere vituperata vis cu,
-       te pri duis timeam scaevola, nam postea diceret ne. Cum ex quod aliquip mediocritatem, mei habemus persecuti mediocritatem ei.
-      </p>
-      <p>
-          Odio recteque expetenda eum ea, cu atqui maiestatis cum. Te eum nibh laoreet, case nostrud nusquam an vis.
-          Clita debitis apeirian et sit, integre iudicabit elaboraret duo ex. Nihil causae adipisci id eos.
-          <ul class="timeline2">
-            <li class="timeline2"><a href="posts"><img alt="blog" src="{% static "img/timeline/angularjs.png" %}"></a></li>
-            <li class="timeline2"><img alt="github" src="{% static "img/timeline/bootstrap.png" %}"></li>
-            <li class="timeline2"><img alt="facebook" src="{% static "img/timeline/git.png" %}"></li>
-            <li class="timeline2"><img alt="gmail" src="{% static "img/timeline/linux.png" %}"></li>
-          </ul>
-
-      </p>
-    </div>
-
-  </div>
 {% block content %}{% endblock content %}
 </div>
 
@@ -78,19 +44,48 @@ fjs.parentNode.insertBefore(js, fjs);
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){
   $(".content-markdown").each(function(){
     var content = $(this).text()
     var markedContent = marked(content)
     $(this).html(markedContent)
-
   })
 
   $(".post-detail-item img").each(function(){
     $(this).addClass("img-responsive");
-
   })
+
+   var contentInput = $("#id_content");
+
+   function setContent(value){
+     var markedContent = marked(value)
+     $("#preview-content").html(markedContent)
+     $("#preview-content img").each(function(){
+       $(this).addClass("img-responsive")
+     })
+   }
+   setContent(contentInput.val())
+
+   contentInput.keyup(function(){
+     var newContent = $(this).val()
+       setContent(newContent)
+   })
+
+   var titleInput = $("#id_title");
+
+   function setTitle(value){
+     $("#preview-title").text(value)
+   }
+   setTitle(titleInput.val())
+
+   titleInput.keyup(function(){
+     var newTitle = $(this).val()
+       setContent(newTitle)
+
+   })
+
 })
 </script>
 </body>
